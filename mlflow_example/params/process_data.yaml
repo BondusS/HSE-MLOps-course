@@ -1,0 +1,9 @@
+params:
+  features:
+    - race
+    - sex
+    - native.country
+    - occupation
+    - education
+    - capital.gain
+  train_size: 1000
