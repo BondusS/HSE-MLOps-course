@@ -1,0 +1,5 @@
+params:
+  penalty: l2
+  C: 0.9
+  solver: lbfgs
+  max_iter: 1000

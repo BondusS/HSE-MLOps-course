@@ -1,0 +1,18 @@
+version: "3.9"
+
+services:
+  mlflow_example:
+    build:
+      context: ./
+      dockerfile: ./Dockerfile
+    image: mlflow_example:$USER
+    container_name: mlflow_example_$USER
+    environment:
+      - USERNAME=$USER
+      - USER=$USER
+    working_dir: /app
+    volumes:
+      - ./:/app
+    ports:
+      - 8024:8888
+    command: sh -c "cd / && jupyter notebook --allow-root --ip=0.0.0.0 && sleep infinity"

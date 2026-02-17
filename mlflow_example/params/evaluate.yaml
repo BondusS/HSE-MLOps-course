@@ -1,0 +1,5 @@
+params:
+  metrics:
+      - accuracy
+      - f1
+      - roc_auc
