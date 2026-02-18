@@ -4,6 +4,7 @@ from joblib import dump
 from sklearn.linear_model import LogisticRegression
 from sklearn.tree import DecisionTreeClassifier
 from sklearn.ensemble import RandomForestClassifier, GradientBoostingClassifier
+import os
 
 from constants import DATASET_PATH_PATTERN, MODEL_FILEPATH, RANDOM_STATE
 from utils import get_logger, load_params
@@ -43,6 +44,7 @@ def train():
     model.fit(X_train, y_train)
 
     logger.info('Сохраняем и логируем модель')
+    os.makedirs(os.path.dirname(MODEL_FILEPATH), exist_ok=True)
     dump(model, MODEL_FILEPATH)
     mlflow.sklearn.log_model(model, 'model')
     logger.info('Успешно!')
