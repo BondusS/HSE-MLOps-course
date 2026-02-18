@@ -1,12 +1,16 @@
-datasets==3.6.0
-mlflow==2.22.4
-numpy==2.1.1
-pandas==2.2.3
-scikit-learn==1.8.0
-xgboost==3.1.3
+# Core ML Libraries
+mlflow~=2.12  # Using a more recent but stable version of MLflow
+numpy~=1.26  # Pin to <2.0 for broader compatibility
+pandas~=2.2
+scikit-learn~=1.4
+xgboost~=2.0
 
-ipykernel==6.25.2
-ipython==8.12.2
-notebook==6.4.10
-traitlets==5.9.0
-setuptools==80.10.1
+# Data handling
+datasets~=2.19
+
+# Jupyter Environment (for interactive development)
+ipykernel~=6.29
+ipython~=8.22
+notebook~=7.1  # Modern notebook version
+traitlets~=5.14
+setuptools~=69.5

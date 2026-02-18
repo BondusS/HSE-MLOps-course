@@ -40,8 +40,9 @@ def process_data():
         X_transformed, y_transformed, test_size=TEST_SIZE, random_state=RANDOM_STATE
     )
 
-    # use train_size param to take only train_size rows of train dataset
-    ...
+    train_size = params['train_size']
+    if train_size != -1:
+        X_train, y_train = X_train[:train_size], y_train[:train_size]
     logger.info(f'    Размер тренировочного датасета: {len(y_train)}')
     logger.info(f'    Размер тестового датасета: {len(y_test)}')
 

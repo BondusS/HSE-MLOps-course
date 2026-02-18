@@ -1,4 +1,5 @@
 params:
+  model_type: LogisticRegression
   penalty: l2
   C: 0.9
   solver: lbfgs

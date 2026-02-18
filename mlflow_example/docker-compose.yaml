@@ -15,4 +15,4 @@ services:
       - ./:/app
     ports:
       - 8024:8888
-    command: sh -c "cd / && jupyter notebook --allow-root --ip=0.0.0.0 && sleep infinity"
+    command: sh -c "python runner.py"
