@@ -1,4 +1,12 @@
-# mlflow_example
-Пример использования mlflow для трекинга экспериментов
+# mlflow_example_my_version
+Использование mlflow для трекинга экспериментов
 
-Запуск пайплайна &mdash; `python3 runner.py`
+Запуск пайплайна:
+
+```bash
+cd mlflow_example
+```
+
+```bash
+docker-compose up
+```
