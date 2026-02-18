@@ -8,5 +8,9 @@ cd mlflow_example
 ```
 
 ```bash
-docker-compose up
+docker compose build --no-cache
+```
+
+```bash
+docker compose up
 ```

@@ -1,18 +1,16 @@
-version: "3.9"
-
 services:
-  mlflow_example:
+  app:
     build:
       context: ./
       dockerfile: ./Dockerfile
-    image: mlflow_example:$USER
-    container_name: mlflow_example_$USER
-    environment:
-      - USERNAME=$USER
-      - USER=$USER
+    # Use static, descriptive names for predictability and stability
+    image: hse-mlops-homework:latest
+    container_name: hse-mlops-app
     working_dir: /app
     volumes:
+      # Mount the current directory into the container's /app directory
       - ./:/app
     ports:
       - 8024:8888
+    # The command to execute when the container starts
     command: sh -c "python runner.py"
