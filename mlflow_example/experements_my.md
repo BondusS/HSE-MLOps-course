@@ -7,13 +7,13 @@
 **(accuracy, f1, precision, recall, roc-auc, pr-auc)** 
 по ним определяется лучшее значение исследуемого гиперпараметра
 
-![alt text](experements_gaphics/my_all.jpg)
+![all my experements](experements_gaphics/my_all.jpg)
 
 ### Сравнение lr (learning rate) для градиентного бустинга
 
 Сравнивались значения: full-size, 0.01, 0.1, 0.2, 0.3
 
-![alt text](experements_gaphics/my_grad_boosting_lr.png)
+![my lr for grad boosting experements](experements_gaphics/my_grad_boosting_lr.png)
 
 Для всех рассмотренных значений **lr** большинство метрик качества имеют очень близкие значения,
 но при значении 0.01 модель сильно отстаёт от остальных по метрикам f1, pr_auc, roc_auc и recall, 
@@ -24,7 +24,7 @@
 
 Сравнивались значения 50, 100, 150, 200
 
-![alt text](experements_gaphics/my_random_forest_estimators.png)
+![my estimators for random forest experements](experements_gaphics/my_random_forest_estimators.png)
 
 Для всех рассмотренных значений **estimators** все метрики качества имеют очень близкие значения,
 но этот гиперпараметр имеет прямое влияние на архитектуру модели - вес и вычислительную сложность. 
@@ -35,7 +35,7 @@
 
 Сравнивались значения 3, 5, 7, 10
 
-![alt text](experements_gaphics/my_decision_tree_depth.png)
+![my depth for decision tree experements](experements_gaphics/my_decision_tree_depth.png)
 
 На всех метриках качества, кроме precision, наиболее высокое значение демонстрируем модель глубиной **10**,
 значит в рамках этих результатов эксперимента полагаем данное значение лучшим для рассматриваемого гиперпараметра.
